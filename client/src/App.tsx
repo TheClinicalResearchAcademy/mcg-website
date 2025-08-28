@@ -30,7 +30,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <div className="min-h-screen flex flex-col">
+        <div className="min-h-screen flex flex-col bg-transparent">
           <Banner 
             message="🎉 Now accepting new research sites! Join our network of 85+ inspection-ready clinical research sites." 
             type="announcement"

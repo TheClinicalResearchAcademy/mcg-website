@@ -72,7 +72,7 @@ const valueProps = [
 
 export default function Home() {
   return (
-    <div data-testid="home-page">
+    <div data-testid="home-page" className="bg-transparent">
       {/* Hero Section */}
       <section className="py-20 lg:py-32 bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 relative overflow-hidden" data-testid="hero-section">
         <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-secondary/5"></div>
