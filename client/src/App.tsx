@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import Banner from "@/components/Banner";
 import Home from "@/pages/Home";
 import About from "@/pages/About";
 import Services from "@/pages/Services";
@@ -30,6 +31,12 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <div className="min-h-screen flex flex-col">
+          <Banner 
+            message="🎉 Now accepting new research sites! Join our network of 85+ inspection-ready clinical research sites." 
+            type="announcement"
+            ctaText="Apply Today"
+            ctaAction={() => window.location.href = '/add-site'}
+          />
           <Navigation />
           <main className="flex-1">
             <Router />
