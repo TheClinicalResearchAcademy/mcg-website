@@ -168,7 +168,7 @@ export default function Home() {
       </section>
 
       {/* What We Do Section */}
-      <section className="py-20 bg-gradient-to-br from-background to-muted/30 relative" data-testid="services-preview-section">
+      <section className="py-20 bg-white/40 backdrop-blur-sm relative" data-testid="services-preview-section">
         <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-primary via-secondary to-accent"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -224,7 +224,7 @@ export default function Home() {
       </section>
 
       {/* How We Work Section */}
-      <section className="py-20 bg-gradient-to-br from-secondary/5 via-background to-primary/5 relative" data-testid="workflow-section">
+      <section className="py-20 bg-white/30 backdrop-blur-sm relative" data-testid="workflow-section">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(171_94%_23%_/_0.05),transparent_50%),radial-gradient(circle_at_70%_80%,hsl(218_81%_40%_/_0.05),transparent_50%)]"></div>
         <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -260,7 +260,7 @@ export default function Home() {
       </section>
 
       {/* Value Propositions */}
-      <section className="py-20 bg-gradient-to-br from-accent/5 via-muted/20 to-primary/5 relative" data-testid="value-props-section">
+      <section className="py-20 bg-white/40 backdrop-blur-sm relative" data-testid="value-props-section">
         <div className="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-accent via-primary to-secondary"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">

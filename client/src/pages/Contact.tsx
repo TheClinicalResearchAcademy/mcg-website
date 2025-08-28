@@ -68,7 +68,7 @@ export default function Contact() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 bg-gradient-to-br from-background to-muted/30 relative" data-testid="contact-form-section">
+      <section className="py-20 bg-white/40 backdrop-blur-sm relative" data-testid="contact-form-section">
         <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-primary via-secondary to-accent"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12">

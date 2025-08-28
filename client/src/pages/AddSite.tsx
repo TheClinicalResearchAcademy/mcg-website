@@ -131,7 +131,7 @@ export default function AddSite() {
       </section>
 
       {/* Form Section */}
-      <section className="py-20 bg-gradient-to-br from-background to-muted/30 relative" data-testid="add-site-form-section">
+      <section className="py-20 bg-white/40 backdrop-blur-sm relative" data-testid="add-site-form-section">
         <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-primary via-secondary to-accent"></div>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <Card className="p-8 lg:p-12 colorful-shadow border-l-4 border-l-primary/50">
