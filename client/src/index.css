@@ -104,4 +104,25 @@
   .gradient-bg {
     background: linear-gradient(135deg, hsl(171 94% 23%) 0%, hsl(218 81% 40%) 100%);
   }
+
+  .gradient-border {
+    background: linear-gradient(135deg, hsl(171 94% 23%), hsl(218 81% 40%), hsl(158 64% 40%)) padding-box,
+                linear-gradient(135deg, hsl(171 94% 23%), hsl(218 81% 40%), hsl(158 64% 40%)) border-box;
+    border: 2px solid transparent;
+  }
+
+  .colorful-shadow {
+    box-shadow: 0 10px 25px -5px hsl(171 94% 23% / 0.1), 0 10px 10px -5px hsl(218 81% 40% / 0.1);
+  }
+
+  .colorful-shadow:hover {
+    box-shadow: 0 20px 40px -5px hsl(171 94% 23% / 0.2), 0 15px 20px -5px hsl(218 81% 40% / 0.2);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, hsl(171 94% 23%), hsl(218 81% 40%), hsl(158 64% 40%));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }

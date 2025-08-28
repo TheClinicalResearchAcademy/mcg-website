@@ -51,11 +51,14 @@ export default function Contact() {
   return (
     <div data-testid="contact-page">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-muted/30 to-background" data-testid="contact-hero-section">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 relative overflow-hidden" data-testid="contact-hero-section">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-secondary/5"></div>
+        <div className="absolute top-10 right-10 w-32 h-32 bg-accent/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-10 left-10 w-40 h-40 bg-primary/20 rounded-full blur-3xl"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-12">
             <h1 className="font-heading font-bold text-4xl lg:text-6xl text-foreground mb-6" data-testid="contact-title">
-              Contact <span className="text-primary">Us</span>
+              Contact <span className="text-gradient">Us</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto" data-testid="contact-subtitle">
               Ready to get started? Let's discuss how we can help your site succeed in clinical research.
@@ -65,7 +68,8 @@ export default function Contact() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 bg-background" data-testid="contact-form-section">
+      <section className="py-20 bg-gradient-to-br from-background to-muted/30 relative" data-testid="contact-form-section">
+        <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-primary via-secondary to-accent"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}

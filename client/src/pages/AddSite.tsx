@@ -114,11 +114,14 @@ export default function AddSite() {
   return (
     <div data-testid="add-site-page">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-muted/30 to-background" data-testid="add-site-hero-section">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 relative overflow-hidden" data-testid="add-site-hero-section">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-secondary/5"></div>
+        <div className="absolute top-10 right-10 w-32 h-32 bg-accent/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-10 left-10 w-40 h-40 bg-primary/20 rounded-full blur-3xl"></div>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-12">
             <h1 className="font-heading font-bold text-4xl lg:text-6xl text-foreground mb-6" data-testid="add-site-title">
-              Add Your <span className="text-primary">Site</span>
+              Add Your <span className="text-gradient">Site</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto" data-testid="add-site-subtitle">
               Join our network of research-ready sites and unlock new clinical trial opportunities
@@ -128,9 +131,10 @@ export default function AddSite() {
       </section>
 
       {/* Form Section */}
-      <section className="py-20 bg-background" data-testid="add-site-form-section">
+      <section className="py-20 bg-gradient-to-br from-background to-muted/30 relative" data-testid="add-site-form-section">
+        <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-primary via-secondary to-accent"></div>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Card className="p-8 lg:p-12">
+          <Card className="p-8 lg:p-12 colorful-shadow border-l-4 border-l-primary/50">
             <CardContent className="p-0">
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" data-testid="site-registration-form">

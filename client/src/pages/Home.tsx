@@ -74,8 +74,11 @@ export default function Home() {
   return (
     <div data-testid="home-page">
       {/* Hero Section */}
-      <section className="py-20 lg:py-32 bg-gradient-to-br from-muted/30 to-background" data-testid="hero-section">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 lg:py-32 bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 relative overflow-hidden" data-testid="hero-section">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-secondary/5"></div>
+        <div className="absolute top-20 right-20 w-32 h-32 bg-accent/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-20 w-40 h-40 bg-primary/20 rounded-full blur-3xl"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
               <h1 className="font-heading font-bold text-4xl lg:text-6xl text-foreground leading-tight mb-6" data-testid="hero-title">
@@ -165,7 +168,8 @@ export default function Home() {
       </section>
 
       {/* What We Do Section */}
-      <section className="py-20 bg-background" data-testid="services-preview-section">
+      <section className="py-20 bg-gradient-to-br from-background to-muted/30 relative" data-testid="services-preview-section">
+        <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-primary via-secondary to-accent"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-heading font-bold text-3xl lg:text-4xl text-foreground mb-4" data-testid="services-preview-title">What We Do</h2>
@@ -176,10 +180,10 @@ export default function Home() {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="hover:shadow-lg transition-all duration-200 hover:-translate-y-1" data-testid={`service-card-${service.title.toLowerCase().replace(/\s+/g, '-')}`}>
+              <Card key={index} className="hover:shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-primary/20 border-l-4 hover:border-l-8 hover:bg-gradient-to-br hover:from-background hover:to-muted/20" style={{borderLeftColor: service.color === 'primary' ? 'hsl(171 94% 23%)' : service.color === 'secondary' ? 'hsl(218 81% 40%)' : 'hsl(158 64% 40%)'}} data-testid={`service-card-${service.title.toLowerCase().replace(/\s+/g, '-')}`}>
                 <CardContent className="p-8">
-                  <div className={`bg-${service.color}/10 w-16 h-16 rounded-full flex items-center justify-center mb-6`}>
-                    <i className={`${service.icon} text-2xl text-${service.color}`}></i>
+                  <div className={`w-16 h-16 rounded-full flex items-center justify-center mb-6 shadow-lg`} style={{backgroundColor: service.color === 'primary' ? 'hsl(171 94% 23% / 0.15)' : service.color === 'secondary' ? 'hsl(218 81% 40% / 0.15)' : 'hsl(158 64% 40% / 0.15)'}}>
+                    <i className={`${service.icon} text-2xl`} style={{color: service.color === 'primary' ? 'hsl(171 94% 23%)' : service.color === 'secondary' ? 'hsl(218 81% 40%)' : 'hsl(158 64% 40%)'}}></i>
                   </div>
                   <h3 className="font-heading font-bold text-xl mb-4">{service.title}</h3>
                   <p className="text-muted-foreground mb-6">{service.description}</p>
@@ -220,8 +224,10 @@ export default function Home() {
       </section>
 
       {/* How We Work Section */}
-      <section className="py-20 bg-background" data-testid="workflow-section">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-gradient-to-br from-secondary/5 via-background to-primary/5 relative" data-testid="workflow-section">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(171_94%_23%_/_0.05),transparent_50%),radial-gradient(circle_at_70%_80%,hsl(218_81%_40%_/_0.05),transparent_50%)]"></div>
+        <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="font-heading font-bold text-3xl lg:text-4xl text-foreground mb-4" data-testid="workflow-title">How We Work</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto" data-testid="workflow-subtitle">
@@ -233,11 +239,16 @@ export default function Home() {
             {workflowSteps.map((step, index) => (
               <div key={index} className="text-center" data-testid={`workflow-step-${step.step}`}>
                 <div className="relative mb-8">
-                  <div className={`bg-${step.color} w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4`}>
+                  <div className={`w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg`} 
+                       style={{
+                         background: step.color === 'primary' ? 'linear-gradient(135deg, hsl(171 94% 23%), hsl(171 94% 30%))' : 
+                                    step.color === 'secondary' ? 'linear-gradient(135deg, hsl(218 81% 40%), hsl(218 81% 50%))' : 
+                                    'linear-gradient(135deg, hsl(158 64% 40%), hsl(158 64% 50%))'
+                       }}>
                     <span className="font-heading font-bold text-2xl text-primary-foreground">{step.step}</span>
                   </div>
                   {index < workflowSteps.length - 1 && (
-                    <div className="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-border transform translate-x-2" style={{width: "calc(100% - 2rem)"}}></div>
+                    <div className="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-primary/60 to-secondary/60 transform translate-x-2" style={{width: "calc(100% - 2rem)"}}></div>
                   )}
                 </div>
                 <h3 className="font-heading font-bold text-xl mb-4">{step.title}</h3>
@@ -249,7 +260,8 @@ export default function Home() {
       </section>
 
       {/* Value Propositions */}
-      <section className="py-20 bg-muted/20" data-testid="value-props-section">
+      <section className="py-20 bg-gradient-to-br from-accent/5 via-muted/20 to-primary/5 relative" data-testid="value-props-section">
+        <div className="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-accent via-primary to-secondary"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-heading font-bold text-3xl lg:text-4xl text-foreground mb-4" data-testid="value-props-title">Why Choose MCG</h2>
@@ -260,10 +272,10 @@ export default function Home() {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {valueProps.map((prop, index) => (
-              <Card key={index} data-testid={`value-prop-${prop.title.toLowerCase()}`}>
+              <Card key={index} className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-t-4" style={{borderTopColor: prop.color === 'primary' ? 'hsl(171 94% 23%)' : prop.color === 'secondary' ? 'hsl(218 81% 40%)' : 'hsl(158 64% 40%)'}} data-testid={`value-prop-${prop.title.toLowerCase()}`}>
                 <CardContent className="p-6">
-                  <div className={`bg-${prop.color}/10 w-12 h-12 rounded-full flex items-center justify-center mb-4`}>
-                    <i className={`${prop.icon} text-${prop.color}`}></i>
+                  <div className={`w-12 h-12 rounded-full flex items-center justify-center mb-4 shadow-md`} style={{backgroundColor: prop.color === 'primary' ? 'hsl(171 94% 23% / 0.15)' : prop.color === 'secondary' ? 'hsl(218 81% 40% / 0.15)' : 'hsl(158 64% 40% / 0.15)'}}>
+                    <i className={`${prop.icon}`} style={{color: prop.color === 'primary' ? 'hsl(171 94% 23%)' : prop.color === 'secondary' ? 'hsl(218 81% 40%)' : 'hsl(158 64% 40%)'}}></i>
                   </div>
                   <h4 className="font-heading font-semibold mb-2">{prop.title}</h4>
                   <p className="text-sm text-muted-foreground">{prop.description}</p>

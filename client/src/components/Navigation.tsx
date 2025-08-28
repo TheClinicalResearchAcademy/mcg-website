@@ -21,26 +21,34 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border" data-testid="main-navigation">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b-2 border-primary/20 shadow-lg" data-testid="main-navigation">
+      <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-secondary/5 to-accent/5"></div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex justify-between items-center h-16">
-          <Link href="/" className="font-heading font-bold text-xl text-primary" data-testid="logo-link">
-            Monache Consulting Group (MCG)
+          <Link href="/" className="font-heading font-bold text-xl flex items-center space-x-2 hover:scale-105 transition-transform" data-testid="logo-link">
+            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
+              <i className="fas fa-microscope text-white text-sm"></i>
+            </div>
+            <span className="text-gradient">Monache Consulting Group</span>
           </Link>
           
           <div className="hidden md:flex space-x-8">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={`text-foreground hover:text-primary transition-colors font-medium ${
-                  isActive(item.href) ? "text-primary" : ""
-                }`}
-                data-testid={`nav-link-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
-              >
-                {item.label}
-              </Link>
-            ))}
+            {navItems.map((item, index) => {
+              const colors = ['text-primary', 'text-secondary', 'text-accent', 'text-primary', 'text-secondary'];
+              const hoverColors = ['hover:text-primary', 'hover:text-secondary', 'hover:text-accent', 'hover:text-primary', 'hover:text-secondary'];
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`text-foreground ${hoverColors[index]} transition-all duration-200 hover:scale-105 font-medium px-3 py-1 rounded-full hover:bg-gradient-to-br hover:from-primary/10 hover:to-secondary/10 ${
+                    isActive(item.href) ? `${colors[index]} font-semibold bg-gradient-to-br from-primary/10 to-secondary/10` : ""
+                  }`}
+                  data-testid={`nav-link-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
           </div>
           
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
