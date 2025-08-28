@@ -154,8 +154,8 @@ export default function Home() {
             
             <div className="order-1 lg:order-2">
               <img 
-                src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
-                alt="Clinical research professional working with laptop and medical documents" 
+                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
+                alt="Dynamic team of clinical research professionals collaborating in modern medical facility" 
                 className="rounded-xl shadow-2xl w-full h-auto"
                 data-testid="hero-image"
               />
