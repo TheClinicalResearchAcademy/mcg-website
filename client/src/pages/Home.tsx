@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "wouter";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
-import bannerImage from "@assets/MCG Banner_1756421754750.png";
+import bannerImage from "@assets/ChatGPT Image Aug 28, 2025 at 06_33_20 PM_1756424015816.png";
 
 const services = [
   {
