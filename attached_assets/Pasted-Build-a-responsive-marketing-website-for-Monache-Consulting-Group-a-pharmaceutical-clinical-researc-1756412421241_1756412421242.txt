@@ -1,0 +1,85 @@
+Build a responsive marketing website for Monache Consulting Group (a pharmaceutical clinical research services firm). Use bold, clean, pharma-friendly design with trust-driven typography and colors.
+Brand & Visuals
+Primary colors:
+Deep Teal #0F766E (primary)
+Cobalt Blue #1E40AF (buttons/links)
+Emerald #059669 (accents)
+Charcoal #0B1220 (headings/body)
+White #FFFFFF (background/sections)
+Optional gradient: Deep Teal → Cobalt at 135°.
+Fonts: Headings Montserrat or IBM Plex Sans (700/800). Body Inter or Source Sans Pro (400/500). High contrast, generous line-height.
+Hero image: I will upload monache-hero.png (the provided slide with doctor + laptop). Place it on the right side of the hero on desktop, stacked above on mobile.
+Icon style: simple line icons (outline), pharma/clinical vibe.
+Buttons: bold, pill/rounded-xl, hover = subtle lift + shadow.
+Global Layout
+Sticky top navigation with logo text “Monache Consulting Group (MCG)”.
+Sections use ample whitespace, 12-column grid, max-width ~1200px.
+Include SEO meta (title, description), favicon, and OpenGraph tags using the hero image.
+Pages / Tabs (in the top nav)
+Home
+Headline: “Clinical Research. Audit-Ready. Sponsor-Trusted.”
+Subhead: “Auditing • Monitoring • Business Development • Naïve Site Enablement • Comprehensive Training.”
+Primary CTA: “Get a Consultation” (links to Contact Us).
+Secondary CTA: “Add Your Site” (links to Add Your Site page).
+Trust badges row (GCP, 21 CFR Part 11, GDPR) with tooltips.
+“What We Do” cards (5): Auditing, Monitoring, Business Development (connect quality sites to sponsors), Managing clinical research naïve sites, Comprehensive training for clinical research staff.
+Results/metrics strip (e.g., “300+ CRAs mentored”, “Sponsor-ready SOPs”, “Inspection-ready sites”, use placeholders).
+About Us
+Mission, vision, and leadership snapshot.
+Value pillars: Quality, Compliance, Speed, Site Enablement, Data Integrity.
+Timeline or “How we work” 4-step graphic (Discover → Enable → Monitor → Optimize).
+Downloadable one-pager (placeholder link).
+Services We Offer
+Grid with detail pages/accordions for:
+Auditing (GCP, PI oversight, vendor audits).
+Monitoring (RBM/central + on-site, SDV/SDR).
+Business Development (matching quality sites to sponsors).
+Naïve Site Management (SOP buildout, staff training, feasibility).
+Comprehensive Training (PI/CRC/CRA/CTA/DM/CTM modules; certificates).
+Each service panel: short summary, bullets, outcomes, CTA “Request Proposal”.
+Add Your Site (primary lead form)
+Purpose: onboard research-naïve or growing sites into the MCG network.
+Form fields (validated, required where noted):
+Site/Institution Name*
+Primary Contact Name*
+Email* (format validation)
+Phone*
+Address (City, State/Region, Country)*
+Principal Investigator Name & Specialty*
+Therapeutic Areas of Interest (multi-select)
+Prior Clinical Trial Experience (Yes/No; if Yes, # of trials and phases)
+EHR system (free text)
+Certifications/SOPs available (checkboxes)
+Upload capability for SOPs/training certificates (accept .pdf/.docx/.zip)
+Notes / Availability
+Consent checkbox: “I agree to the processing of my data per GDPR and acknowledge electronic records/signatures under 21 CFR Part 11.”*
+On submit: show a success screen and send data to a mock endpoint /api/lead (create a simple server stub). Also email placeholder (console log) for now.
+Contact Us
+Short copy + contact form (Name*, Email*, Company/Site, Message*).
+Sidebar with business email and placeholder address.
+Map embed placeholder.
+Training (optional tab)
+Overview of role-based training (PI, CRC, CRA, CTA, DM, CTM) with sample syllabus and certificate preview. CTA to Contact.
+Resources (optional)
+Blog/articles list, compliance checklists, downloadable templates (placeholders). Search + tag filters.
+Careers (optional)
+Simple listings component with apply button (dummy form).
+Privacy & Compliance (footer link + page)
+GDPR notice, cookies banner, 21 CFR Part 11 statement, data retention policy.
+Footer
+Logo text, quick links, social icons, newsletter email capture.
+Small print with © year and links to Privacy/Terms.
+Accessibility & Performance
+WCAG AA contrast, proper landmarks, keyboard nav, focus states.
+Lazy-load images, optimized hero, semantic HTML, aria-labels.
+Tech/Implementation Notes
+Stack: vanilla HTML/CSS/JS or React/Vite—choose what’s fastest in Replit.
+Use a clean utility CSS (Tailwind or simple custom CSS).
+Create /public/images/monache-hero.png and reference it in the hero and OpenGraph.
+Add a minimal Node/Express server for form POSTs to /api/lead and /api/contact (log to server console for now).
+Include a README.md with instructions for swapping the hero, editing colors, and wiring real email/DB later.
+Copy to include (use and adapt)
+Hero bullets (from image):
+“Auditing • Monitoring • Business Development (We connect quality sites to sponsors) • We manage clinical research naïve sites • We perform comprehensive training for clinical research staff.”
+CTA buttons: Get a Consultation, Add Your Site, Request Proposal.
+Deliver a polished, production-ready template with placeholder content where needed.
