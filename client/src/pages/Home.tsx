@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "wouter";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import bannerImage from "@assets/MCG Banner_1756421754750.png";
 
 const services = [
   {
@@ -73,40 +74,41 @@ const valueProps = [
 export default function Home() {
   return (
     <div data-testid="home-page" className="bg-transparent">
-      {/* Hero Section */}
-      <section className="py-20 lg:py-32 bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 relative overflow-hidden" data-testid="hero-section">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-secondary/5"></div>
-        <div className="absolute top-20 right-20 w-32 h-32 bg-accent/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 left-20 w-40 h-40 bg-primary/20 rounded-full blur-3xl"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="order-2 lg:order-1">
-              <h1 className="font-heading font-bold text-4xl lg:text-6xl text-foreground leading-tight mb-6" data-testid="hero-title">
-                Clinical Research.<br />
-                <span className="text-primary">Audit-Ready.</span><br />
-                <span className="text-secondary">Sponsor-Trusted.</span>
-              </h1>
-              
-              <p className="text-xl text-muted-foreground mb-8 leading-relaxed" data-testid="hero-subtitle">
-                Auditing • Monitoring • Business Development • Naïve Site Enablement • Comprehensive Training
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 mb-12">
-                <Link href="/contact">
-                  <Button className="btn-primary" data-testid="hero-cta-consultation">
-                    <i className="fas fa-calendar-check mr-2"></i>
-                    Get a Consultation
-                  </Button>
-                </Link>
-                <Link href="/add-site">
-                  <Button variant="outline" className="btn-outline" data-testid="hero-cta-add-site">
-                    <i className="fas fa-plus-circle mr-2"></i>
-                    Add Your Site
-                  </Button>
-                </Link>
-              </div>
-              
-              {/* Trust Badges */}
+      {/* Hero Section with Banner Image */}
+      <section className="relative overflow-hidden" data-testid="hero-section">
+        <img 
+          src={bannerImage} 
+          alt="Monache Consulting Group - Clinical Research Services" 
+          className="w-full h-auto object-cover"
+        />
+        
+        {/* CTA Buttons overlay - positioned over the banner */}
+        <div className="absolute inset-0 flex items-end justify-start p-8 lg:p-16">
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Link href="/contact">
+              <Button 
+                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg font-semibold rounded-full shadow-lg transition-transform hover:scale-105" 
+                data-testid="hero-cta-consultation"
+              >
+                Get a Consultation
+              </Button>
+            </Link>
+            <Link href="/add-site">
+              <Button 
+                variant="outline" 
+                className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 text-lg font-semibold rounded-full shadow-lg transition-all hover:scale-105" 
+                data-testid="hero-cta-add-site"
+              >
+                Add Your Site
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+      
+      {/* Trust Badges Section */}
+      <section className="py-12 bg-white/40 backdrop-blur-sm relative" data-testid="trust-badges-section">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="grid grid-cols-3 gap-4" data-testid="trust-badges">
                 <Tooltip>
                   <TooltipTrigger asChild>
@@ -153,17 +155,6 @@ export default function Home() {
                   </TooltipContent>
                 </Tooltip>
               </div>
-            </div>
-            
-            <div className="order-1 lg:order-2">
-              <img 
-                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
-                alt="Dynamic team of clinical research professionals collaborating in modern medical facility" 
-                className="rounded-xl shadow-2xl w-full h-auto"
-                data-testid="hero-image"
-              />
-            </div>
-          </div>
         </div>
       </section>
 
