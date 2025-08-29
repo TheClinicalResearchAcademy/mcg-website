@@ -10,6 +10,9 @@ import About from "@/pages/About";
 import Services from "@/pages/Services";
 import AddSite from "@/pages/AddSite";
 import Contact from "@/pages/Contact";
+import PrivacyPolicy from "@/pages/PrivacyPolicy";
+import TermsOfService from "@/pages/TermsOfService";
+import TermsOfAgreement from "@/pages/TermsOfAgreement";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -20,6 +23,9 @@ function Router() {
       <Route path="/services" component={Services} />
       <Route path="/add-site" component={AddSite} />
       <Route path="/contact" component={Contact} />
+      <Route path="/privacy-policy" component={PrivacyPolicy} />
+      <Route path="/terms-of-service" component={TermsOfService} />
+      <Route path="/terms-of-agreement" component={TermsOfAgreement} />
       <Route component={NotFound} />
     </Switch>
   );

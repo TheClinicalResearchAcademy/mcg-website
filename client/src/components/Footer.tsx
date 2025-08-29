@@ -120,9 +120,9 @@ export default function Footer() {
               © 2024 Monache Consulting Group. All rights reserved.
             </div>
             <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-background/60 hover:text-background transition-colors" data-testid="footer-link-privacy">Privacy Policy</a>
-              <a href="#" className="text-background/60 hover:text-background transition-colors" data-testid="footer-link-terms">Terms of Service</a>
-              <a href="#" className="text-background/60 hover:text-background transition-colors" data-testid="footer-link-compliance">Compliance</a>
+              <Link href="/privacy-policy" className="text-background/60 hover:text-background transition-colors" data-testid="footer-link-privacy">Privacy Policy</Link>
+              <Link href="/terms-of-service" className="text-background/60 hover:text-background transition-colors" data-testid="footer-link-terms">Terms of Service</Link>
+              <Link href="/terms-of-agreement" className="text-background/60 hover:text-background transition-colors" data-testid="footer-link-agreement">Terms of Agreement</Link>
             </div>
           </div>
         </div>
