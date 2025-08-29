@@ -170,7 +170,7 @@ export default function Contact() {
                       </div>
                       <div>
                         <h4 className="font-heading font-semibold mb-1">Email</h4>
-                        <p className="text-muted-foreground">info@monacheconsulting.com</p>
+                        <p className="text-muted-foreground">Sites@monacheconsultinggroup.com</p>
                       </div>
                     </div>
                     

@@ -156,7 +156,7 @@ export default function TermsOfService() {
           </p>
           <div className="bg-muted/30 p-6 rounded-lg">
             <p className="text-foreground mb-2"><strong>Monache Consulting Group</strong></p>
-            <p className="text-foreground mb-2">Email: legal@monacheconsulting.com</p>
+            <p className="text-foreground mb-2">Email: Sites@monacheconsultinggroup.com</p>
             <p className="text-foreground mb-2">Address: [Your Business Address]</p>
             <p className="text-foreground">Phone: [Your Phone Number]</p>
           </div>
