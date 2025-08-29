@@ -74,13 +74,34 @@ const valueProps = [
 export default function Home() {
   return (
     <div data-testid="home-page" className="bg-transparent">
-      {/* Hero Section with Banner Image */}
+      {/* Hero Section with Banner Image and Navigation */}
       <section className="relative overflow-hidden" data-testid="hero-section">
         <img 
           src={bannerImage} 
           alt="Monache Consulting Group - Clinical Research Services" 
           className="w-full h-auto object-cover"
         />
+        
+        {/* Navigation overlay */}
+        <nav className="absolute top-0 right-0 p-6 lg:p-8 z-10" data-testid="banner-navigation">
+          <div className="flex space-x-6">
+            <Link href="/" className="text-white hover:text-blue-200 transition-colors font-medium px-3 py-1 rounded-full hover:bg-white/10" data-testid="nav-link-home">
+              Home
+            </Link>
+            <Link href="/about" className="text-white hover:text-blue-200 transition-colors font-medium px-3 py-1 rounded-full hover:bg-white/10" data-testid="nav-link-about">
+              About Us
+            </Link>
+            <Link href="/services" className="text-white hover:text-blue-200 transition-colors font-medium px-3 py-1 rounded-full hover:bg-white/10" data-testid="nav-link-services">
+              Services
+            </Link>
+            <Link href="/add-site" className="text-white hover:text-blue-200 transition-colors font-medium px-3 py-1 rounded-full hover:bg-white/10" data-testid="nav-link-add-site">
+              Add Your Site
+            </Link>
+            <Link href="/contact" className="text-white hover:text-blue-200 transition-colors font-medium px-3 py-1 rounded-full hover:bg-white/10" data-testid="nav-link-contact">
+              Contact
+            </Link>
+          </div>
+        </nav>
         
       </section>
       

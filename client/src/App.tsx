@@ -37,7 +37,6 @@ function App() {
             ctaText="Apply Today"
             ctaAction={() => window.location.href = '/add-site'}
           />
-          <Navigation />
           <main className="flex-1">
             <Router />
           </main>
