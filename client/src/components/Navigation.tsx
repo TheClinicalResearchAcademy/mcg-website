@@ -27,11 +27,7 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="font-heading font-bold text-xl flex items-center space-x-2 hover:scale-105 transition-transform" data-testid="logo-link">
-            <img 
-              src={logoImage} 
-              alt="Monache Consulting Group Logo" 
-              className="h-10 w-auto"
-            />
+            <span className="text-gradient">Monache Consulting Group</span>
           </Link>
           
           <div className="hidden md:flex space-x-8">

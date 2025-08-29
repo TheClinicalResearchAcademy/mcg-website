@@ -82,28 +82,6 @@ export default function Home() {
           className="w-full h-auto object-cover"
         />
         
-        {/* CTA Buttons overlay - positioned over the banner */}
-        <div className="absolute inset-0 flex items-end justify-start p-8 lg:p-16">
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Link href="/contact">
-              <Button 
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg font-semibold rounded-full shadow-lg transition-transform hover:scale-105" 
-                data-testid="hero-cta-consultation"
-              >
-                Get a Consultation
-              </Button>
-            </Link>
-            <Link href="/add-site">
-              <Button 
-                variant="outline" 
-                className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 text-lg font-semibold rounded-full shadow-lg transition-all hover:scale-105" 
-                data-testid="hero-cta-add-site"
-              >
-                Add Your Site
-              </Button>
-            </Link>
-          </div>
-        </div>
       </section>
       
       {/* Trust Badges Section */}
