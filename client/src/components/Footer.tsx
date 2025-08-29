@@ -74,7 +74,7 @@ export default function Footer() {
               <li><Link href="/services" className="text-background/80 hover:text-background transition-colors" data-testid="footer-link-auditing">Auditing</Link></li>
               <li><Link href="/services" className="text-background/80 hover:text-background transition-colors" data-testid="footer-link-monitoring">Monitoring</Link></li>
               <li><Link href="/services" className="text-background/80 hover:text-background transition-colors" data-testid="footer-link-business-development">Business Development</Link></li>
-              <li><Link href="/services" className="text-background/80 hover:text-background transition-colors" data-testid="footer-link-site-enablement">Site Enablement</Link></li>
+              <li><Link href="/services" className="text-background/80 hover:text-background transition-colors" data-testid="footer-link-site-management">Site Management</Link></li>
               <li><Link href="/services" className="text-background/80 hover:text-background transition-colors" data-testid="footer-link-training">Training</Link></li>
             </ul>
           </div>

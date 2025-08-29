@@ -46,7 +46,7 @@ const workflowSteps = [
   },
   {
     step: 2,
-    title: "Enable",
+    title: "Manage",
     description: "SOP development, staff training, and infrastructure setup for clinical research readiness.",
     color: "secondary"
   },
