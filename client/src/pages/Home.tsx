@@ -82,26 +82,6 @@ export default function Home() {
           className="w-full h-auto object-cover"
         />
         
-        {/* Navigation overlay */}
-        <nav className="absolute top-0 right-0 p-6 lg:p-8 z-10" data-testid="banner-navigation">
-          <div className="flex space-x-6">
-            <Link href="/" className="text-emerald-400 hover:text-emerald-200 transition-colors font-medium px-3 py-1 rounded-full hover:bg-emerald-500/20" data-testid="nav-link-home">
-              Home
-            </Link>
-            <Link href="/about" className="text-emerald-400 hover:text-emerald-200 transition-colors font-medium px-3 py-1 rounded-full hover:bg-emerald-500/20" data-testid="nav-link-about">
-              About Us
-            </Link>
-            <Link href="/services" className="text-emerald-400 hover:text-emerald-200 transition-colors font-medium px-3 py-1 rounded-full hover:bg-emerald-500/20" data-testid="nav-link-services">
-              Services
-            </Link>
-            <Link href="/add-site" className="text-emerald-400 hover:text-emerald-200 transition-colors font-medium px-3 py-1 rounded-full hover:bg-emerald-500/20" data-testid="nav-link-add-site">
-              Add Your Site
-            </Link>
-            <Link href="/contact" className="text-emerald-400 hover:text-emerald-200 transition-colors font-medium px-3 py-1 rounded-full hover:bg-emerald-500/20" data-testid="nav-link-contact">
-              Contact
-            </Link>
-          </div>
-        </nav>
         
       </section>
       
