@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import OnePagerDialog from "@/components/OnePagerDialog";
 
 const valueProps = [
   { icon: "fas fa-award", title: "Quality", description: "Uncompromising standards in all our services", color: "primary" },
@@ -112,10 +113,14 @@ export default function About() {
                 </p>
               </div>
               
-              <Button className="btn-primary" data-testid="download-one-pager-button">
-                <i className="fas fa-download mr-2"></i>
-                Download Our One-Pager
-              </Button>
+              <OnePagerDialog
+                trigger={
+                  <Button className="btn-primary" data-testid="download-one-pager-button">
+                    <i className="fas fa-lock mr-2"></i>
+                    Download Our One-Pager
+                  </Button>
+                }
+              />
             </div>
             
             <div className="grid grid-cols-2 gap-6">
