@@ -10,24 +10,70 @@ const valueProps = [
 
 const therapeuticAreas = [
   { name: "Oncology", icon: "fas fa-ribbon", color: "primary" },
-  { name: "Cardiology", icon: "fas fa-heartbeat", color: "secondary" },
+  { name: "Cardiology & Electrophysiology", icon: "fas fa-heartbeat", color: "secondary" },
   { name: "Neurology", icon: "fas fa-brain", color: "accent" },
   { name: "Endocrinology", icon: "fas fa-dna", color: "primary" },
-  { name: "Infectious Diseases", icon: "fas fa-virus", color: "secondary" },
+  { name: "Infectious Disease", icon: "fas fa-virus", color: "secondary" },
   { name: "Immunology", icon: "fas fa-shield-virus", color: "accent" },
-  { name: "Respiratory", icon: "fas fa-lungs", color: "primary" },
-  { name: "Gastroenterology", icon: "fas fa-stomach", color: "secondary" },
-  { name: "Rare Diseases", icon: "fas fa-microscope", color: "accent" },
-  { name: "Vaccines", icon: "fas fa-syringe", color: "primary" },
-  { name: "Women's Health", icon: "fas fa-venus", color: "secondary" },
-  { name: "Pediatrics", icon: "fas fa-baby", color: "accent" }
+  { name: "Pulmonology", icon: "fas fa-lungs", color: "primary" },
+  { name: "Gastroenterology", icon: "fas fa-notes-medical", color: "secondary" },
+  { name: "Dermatology", icon: "fas fa-hand-holding-medical", color: "accent" },
+  { name: "Rare & Pediatric Diseases", icon: "fas fa-microscope", color: "primary" },
+  { name: "Gene Therapy", icon: "fas fa-vials", color: "secondary" },
+  { name: "Mental Health", icon: "fas fa-head-side-virus", color: "accent" },
+  { name: "Virology", icon: "fas fa-bacteria", color: "primary" },
+  { name: "Organ Transplant", icon: "fas fa-procedures", color: "secondary" },
+  { name: "Medical Devices", icon: "fas fa-microchip", color: "accent" }
 ];
 
 const experienceStats = [
-  { number: "20+", label: "Years Combined Experience", icon: "fas fa-calendar-check", color: "primary" },
-  { number: "100+", label: "Clinical Trials Supported", icon: "fas fa-flask", color: "secondary" },
-  { number: "50+", label: "Pharmaceutical Sponsors", icon: "fas fa-building", color: "accent" },
-  { number: "12", label: "Therapeutic Areas", icon: "fas fa-stethoscope", color: "primary" }
+  { number: "32+", label: "Years Combined Experience", icon: "fas fa-calendar-check", color: "primary" },
+  { number: "15", label: "Therapeutic Areas Covered", icon: "fas fa-stethoscope", color: "secondary" },
+  { number: "Phase I-IV", label: "Trial Phase Expertise", icon: "fas fa-flask", color: "accent" },
+  { number: "ICH-GCP", label: "Fully Compliant Standards", icon: "fas fa-shield-alt", color: "primary" }
+];
+
+const teamMembers = [
+  {
+    name: "Uchechukwu Omesiete",
+    title: "Senior Clinical Research Associate",
+    location: "Grapevine, TX",
+    experience: "11+ Years",
+    specialties: "Endocrinology, Dermatology, Cardiology, Gastroenterology, Infectious Disease, Pulmonology, Oncology, Immunology",
+    education: "MS Biomedical Engineering (Drexel University), BA Psychology (Temple University)",
+    certifications: "GCP Certified",
+    color: "primary"
+  },
+  {
+    name: "Grant J. Knass",
+    title: "Clinical Research Associate",
+    location: "Loveland, CO",
+    experience: "7+ Years",
+    specialties: "Oncology, Cardiology, Infectious Disease, Gene Therapy, Virology, Mental Health",
+    education: "MBA (Indiana Wesleyan University), BS Healthcare Management & Policy (Indiana University)",
+    certifications: "CITI GCP, CITI CRA Certified",
+    color: "secondary"
+  },
+  {
+    name: "Timperonce Porter, RN",
+    title: "Clinical Research Associate",
+    location: "Atlanta, GA",
+    experience: "9+ Years",
+    specialties: "Endocrinology, Cardiology, Medical Devices",
+    education: "MS Nursing (Herzing University), BS Nursing (Southern University and A&M College)",
+    certifications: "RN, CITI GCP, CITI CRA Certified",
+    color: "accent"
+  },
+  {
+    name: "Richard Cummings, RN",
+    title: "Clinical Research Associate",
+    location: "Lavon, TX",
+    experience: "5+ Years",
+    specialties: "Pulmonology, Neurology, Cardiology, General Medicine",
+    education: "BS Nursing (Chamberlain University)",
+    certifications: "RN, BLS, ACLS, NIHSS, CITI GCP, CITI CRA Certified",
+    color: "primary"
+  }
 ];
 
 const workflowSteps = [
@@ -219,18 +265,53 @@ export default function About() {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[1, 2, 3].map((member) => (
-              <Card key={member} data-testid={`leadership-member-${member}`}>
-                <CardContent className="p-8 text-center">
-                  <div className="w-24 h-24 bg-muted rounded-full mx-auto mb-6 flex items-center justify-center">
-                    <i className="fas fa-user text-3xl text-muted-foreground"></i>
+          <div className="grid md:grid-cols-2 gap-8">
+            {teamMembers.map((member, index) => (
+              <Card key={index} data-testid={`team-member-${index}`} className="hover:shadow-xl transition-shadow">
+                <CardContent className="p-8">
+                  <div className="flex items-start mb-6">
+                    <div className={`bg-${member.color}/10 w-20 h-20 rounded-full flex items-center justify-center mr-6 flex-shrink-0`}>
+                      <i className={`fas fa-user-md text-3xl text-${member.color}`}></i>
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="font-heading font-bold text-xl mb-1">{member.name}</h3>
+                      <p className={`text-${member.color} font-semibold mb-2`}>{member.title}</p>
+                      <div className="flex items-center text-sm text-muted-foreground mb-1">
+                        <i className="fas fa-map-marker-alt mr-2"></i>
+                        {member.location}
+                      </div>
+                      <div className="flex items-center text-sm text-muted-foreground">
+                        <i className="fas fa-briefcase mr-2"></i>
+                        {member.experience} Experience
+                      </div>
+                    </div>
                   </div>
-                  <h3 className="font-heading font-bold text-xl mb-2">Leadership Member {member}</h3>
-                  <p className="text-primary font-medium mb-4">Position Title</p>
-                  <p className="text-muted-foreground text-sm">
-                    Experienced clinical research professional with extensive background in pharmaceutical consulting and regulatory compliance.
-                  </p>
+                  
+                  <div className="space-y-3 text-sm">
+                    <div>
+                      <h4 className="font-heading font-semibold text-foreground mb-1">
+                        <i className="fas fa-stethoscope mr-2 text-muted-foreground"></i>
+                        Therapeutic Areas
+                      </h4>
+                      <p className="text-muted-foreground pl-6">{member.specialties}</p>
+                    </div>
+                    
+                    <div>
+                      <h4 className="font-heading font-semibold text-foreground mb-1">
+                        <i className="fas fa-graduation-cap mr-2 text-muted-foreground"></i>
+                        Education
+                      </h4>
+                      <p className="text-muted-foreground pl-6">{member.education}</p>
+                    </div>
+                    
+                    <div>
+                      <h4 className="font-heading font-semibold text-foreground mb-1">
+                        <i className="fas fa-certificate mr-2 text-muted-foreground"></i>
+                        Certifications
+                      </h4>
+                      <p className="text-muted-foreground pl-6">{member.certifications}</p>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
             ))}
