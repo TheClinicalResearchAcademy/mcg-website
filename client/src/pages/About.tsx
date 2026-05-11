@@ -27,8 +27,8 @@ const therapeuticAreas = [
 ];
 
 const experienceStats = [
-  { number: "32+", label: "Years Combined Experience", icon: "fas fa-calendar-check", color: "primary" },
-  { number: "15", label: "Therapeutic Areas Covered", icon: "fas fa-stethoscope", color: "secondary" },
+  { number: "11+", label: "Years of Experience", icon: "fas fa-calendar-check", color: "primary" },
+  { number: "12", label: "Therapeutic Areas Covered", icon: "fas fa-stethoscope", color: "secondary" },
   { number: "Phase I-IV", label: "Trial Phase Expertise", icon: "fas fa-flask", color: "accent" },
   { number: "ICH-GCP", label: "Fully Compliant Standards", icon: "fas fa-shield-alt", color: "primary" }
 ];
@@ -39,39 +39,9 @@ const teamMembers = [
     title: "Senior Clinical Research Associate",
     location: "Grapevine, TX",
     experience: "11+ Years",
-    specialties: "Endocrinology, Dermatology, Cardiology, Gastroenterology, Infectious Disease, Pulmonology, Oncology, Immunology",
+    specialties: "Endocrinology, Dermatology, Cardiology, Gastroenterology, Infectious Disease, Pulmonology, Oncology, Immunology, Neurology, Rare Disease, Cardiovascular Devices, Organ Transplant",
     education: "MS Biomedical Engineering (Drexel University), BA Psychology (Temple University)",
     certifications: "GCP Certified",
-    color: "primary"
-  },
-  {
-    name: "Grant J. Knass",
-    title: "Clinical Research Associate",
-    location: "Loveland, CO",
-    experience: "7+ Years",
-    specialties: "Oncology, Cardiology, Infectious Disease, Gene Therapy, Virology, Mental Health",
-    education: "MBA (Indiana Wesleyan University), BS Healthcare Management & Policy (Indiana University)",
-    certifications: "CITI GCP, CITI CRA Certified",
-    color: "secondary"
-  },
-  {
-    name: "Timperonce Porter, RN",
-    title: "Clinical Research Associate",
-    location: "Atlanta, GA",
-    experience: "9+ Years",
-    specialties: "Endocrinology, Cardiology, Medical Devices",
-    education: "MS Nursing (Herzing University), BS Nursing (Southern University and A&M College)",
-    certifications: "RN, CITI GCP, CITI CRA Certified",
-    color: "accent"
-  },
-  {
-    name: "Richard Cummings, RN",
-    title: "Clinical Research Associate",
-    location: "Lavon, TX",
-    experience: "5+ Years",
-    specialties: "Pulmonology, Neurology, Cardiology, General Medicine",
-    education: "BS Nursing (Chamberlain University)",
-    certifications: "RN, BLS, ACLS, NIHSS, CITI GCP, CITI CRA Certified",
     color: "primary"
   }
 ];
@@ -265,7 +235,7 @@ export default function About() {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-1 max-w-3xl mx-auto gap-8">
             {teamMembers.map((member, index) => (
               <Card key={index} data-testid={`team-member-${index}`} className="hover:shadow-xl transition-shadow">
                 <CardContent className="p-8">
