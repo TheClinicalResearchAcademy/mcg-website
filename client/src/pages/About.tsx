@@ -8,6 +8,28 @@ const valueProps = [
   { icon: "fas fa-database", title: "Data Integrity", description: "Secure, accurate, and verifiable data management", color: "primary" }
 ];
 
+const therapeuticAreas = [
+  { name: "Oncology", icon: "fas fa-ribbon", color: "primary" },
+  { name: "Cardiology", icon: "fas fa-heartbeat", color: "secondary" },
+  { name: "Neurology", icon: "fas fa-brain", color: "accent" },
+  { name: "Endocrinology", icon: "fas fa-dna", color: "primary" },
+  { name: "Infectious Diseases", icon: "fas fa-virus", color: "secondary" },
+  { name: "Immunology", icon: "fas fa-shield-virus", color: "accent" },
+  { name: "Respiratory", icon: "fas fa-lungs", color: "primary" },
+  { name: "Gastroenterology", icon: "fas fa-stomach", color: "secondary" },
+  { name: "Rare Diseases", icon: "fas fa-microscope", color: "accent" },
+  { name: "Vaccines", icon: "fas fa-syringe", color: "primary" },
+  { name: "Women's Health", icon: "fas fa-venus", color: "secondary" },
+  { name: "Pediatrics", icon: "fas fa-baby", color: "accent" }
+];
+
+const experienceStats = [
+  { number: "20+", label: "Years Combined Experience", icon: "fas fa-calendar-check", color: "primary" },
+  { number: "100+", label: "Clinical Trials Supported", icon: "fas fa-flask", color: "secondary" },
+  { number: "50+", label: "Pharmaceutical Sponsors", icon: "fas fa-building", color: "accent" },
+  { number: "12", label: "Therapeutic Areas", icon: "fas fa-stethoscope", color: "primary" }
+];
+
 const workflowSteps = [
   {
     step: 1,
@@ -122,6 +144,67 @@ export default function About() {
                 <p className="text-muted-foreground">{step.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Experience & Qualifications */}
+      <section className="py-20 bg-background" data-testid="experience-section">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="font-heading font-bold text-3xl lg:text-4xl text-foreground mb-4" data-testid="experience-title">
+              Our Experience & Qualifications
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto" data-testid="experience-subtitle">
+              Decades of combined expertise supporting pharmaceutical sponsors and clinical research sites worldwide
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            {experienceStats.map((stat, index) => (
+              <Card key={index} data-testid={`experience-stat-${index}`}>
+                <CardContent className="p-6 text-center">
+                  <div className={`bg-${stat.color}/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4`}>
+                    <i className={`${stat.icon} text-2xl text-${stat.color}`}></i>
+                  </div>
+                  <div className={`font-heading font-bold text-3xl text-${stat.color} mb-2`}>{stat.number}</div>
+                  <p className="text-sm text-muted-foreground">{stat.label}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Therapeutic Areas */}
+      <section className="py-20 bg-muted/20" data-testid="therapeutic-areas-section">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="font-heading font-bold text-3xl lg:text-4xl text-foreground mb-4" data-testid="therapeutic-areas-title">
+              Therapeutic Areas of Expertise
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto" data-testid="therapeutic-areas-subtitle">
+              Our team has hands-on clinical research experience across a broad range of therapeutic areas
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {therapeuticAreas.map((area, index) => (
+              <Card key={index} className="hover:shadow-lg transition-shadow" data-testid={`therapeutic-area-${index}`}>
+                <CardContent className="p-6 flex items-center">
+                  <div className={`bg-${area.color}/10 w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0`}>
+                    <i className={`${area.icon} text-${area.color}`}></i>
+                  </div>
+                  <h3 className="font-heading font-semibold">{area.name}</h3>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <p className="text-muted-foreground italic">
+              Don't see your therapeutic area? <a href="/contact" className="text-primary font-semibold hover:underline">Contact us</a> — our network and expertise continue to grow.
+            </p>
           </div>
         </div>
       </section>
