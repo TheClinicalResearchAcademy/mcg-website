@@ -1,6 +1,6 @@
 import type { Express, Request, Response, NextFunction } from "express";
 import { storage } from "./storage";
-import { insertSiteLeadSchema, insertContactMessageSchema, insertAccessRequestSchema, insertAccessCodeSchema, validateCodeSchema } from "@shared/schema";
+import { insertSiteLeadSchema, insertContactMessageSchema, insertAccessRequestSchema, insertAccessCodeSchema, validateCodeSchema } from "../shared/schema";
 import { ObjectStorageService } from "./objectStorage";
 import { sendAuthorizationCode, sendAccessRequestNotification } from "./email";
 import { randomBytes } from "crypto";

@@ -1,4 +1,4 @@
-import { type User, type InsertUser, type SiteLead, type InsertSiteLead, type ContactMessage, type InsertContactMessage, type AccessRequest, type InsertAccessRequest, type AccessCode, type InsertAccessCode, users, siteLeads, contactMessages, accessRequests, accessCodes } from "@shared/schema";
+import { type User, type InsertUser, type SiteLead, type InsertSiteLead, type ContactMessage, type InsertContactMessage, type AccessRequest, type InsertAccessRequest, type AccessCode, type InsertAccessCode, users, siteLeads, contactMessages, accessRequests, accessCodes } from "../shared/schema";
 import { randomUUID, randomBytes } from "crypto";
 import { db } from "./db";
 import { eq, and, desc } from "drizzle-orm";
