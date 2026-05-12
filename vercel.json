@@ -1,11 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "vite build",
+  "buildCommand": "vite build && esbuild api-src/handler.ts --bundle --platform=node --format=esm --packages=external --outfile=api/[...path].js",
   "outputDirectory": "dist/public",
-  "framework": null,
-  "functions": {
-    "api/**/*.ts": {
-      "includeFiles": "{server,shared}/**"
-    }
-  }
+  "framework": null
 }
